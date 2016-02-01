@@ -310,7 +310,7 @@ def nbconvert_files(app):
     files = [f for f in os.listdir(fin) if f.endswith(".ipynb")]
 
     for f in files:
-        os.system("jupyter nbconvert {0} --to rst".format(os.path.join(fin,f)))
+        os.system("ipython nbconvert {0} --to rst".format(os.path.join(fin,f)))
         os.rename(f.replace(".ipynb",".rst"),os.path.join(fout,f.replace(".ipynb",".rst")))
         try:
             shutil.move(f.replace(".ipynb","_files"),os.path.join(fout,f.replace(".ipynb","_files")))
