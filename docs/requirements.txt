@@ -1,3 +1,4 @@
 numpydoc
 ipykernel
 pandoc
+nbsphinx
